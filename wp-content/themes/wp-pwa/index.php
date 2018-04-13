@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="manifest" href="/manifest.json">
         <title>WP-PWA</title>
+        <meta name="theme-color" content="#de751f">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head();?>
     </head>
