@@ -30,6 +30,7 @@ add_action('wp_enqueue_scripts', function() {
      * JavaScript
      */
     wp_deregister_script( 'wp-embed' );
+    wp_enqueue_script( 'app', $assetsDir.'/js/app.js', null, null, true );
 });
 
 function bust_cache( $file_name ) {
