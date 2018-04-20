@@ -10,6 +10,7 @@
 !webpack.config.js
 !.babelrc
 !manifest.json
+!serviceworker.js
 !images/
 !wp-content/
 
