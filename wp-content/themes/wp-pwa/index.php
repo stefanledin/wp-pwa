@@ -17,11 +17,13 @@
                 <h1 class="text-white font-sans font-semibold">My Dubai Travel Diary 🇦🇪</h1>
             </div>
         </header>
-        
-        <div class="container mx-auto px-4">
+
+        <div id="app" class="container mx-auto px-4">
             <div class="block sm:flex">
+                <blog-post v-for="post in posts" :key="post.id" :post="post"></blog-post>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <article class="w-full md:w-1/2 lg:w-1/3 sm:m-2 bg-white shadow-lg overflow-hidden">
+                    <!--
+                    <article class="mb-4 w-full md:w-1/2 lg:w-1/3 sm:m-2 bg-white shadow-lg overflow-hidden">
                         <?php
                         if ( has_post_thumbnail() ) {
                             the_post_thumbnail('full', ['class' => 'h-auto']);
@@ -34,6 +36,7 @@
                             <?php the_content();?>
                         </div>
                     </article>
+                    -->
                 <?php endwhile; endif; ?>
             </div>
         </div>
