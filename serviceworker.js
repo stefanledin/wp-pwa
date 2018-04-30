@@ -13,3 +13,8 @@ workbox.routing.registerRoute(/wp-content\/themes\/wp-pwa\/assets\/.+/, workbox.
  * Cache the homepage.
  */
 workbox.routing.registerRoute('/', workbox.strategies.staleWhileRevalidate());
+
+/**
+ * Cache the response from the JSON API
+ */
+workbox.routing.registerRoute(/wp-json\/wp\/v2\/posts/, workbox.strategies.networkFirst());
