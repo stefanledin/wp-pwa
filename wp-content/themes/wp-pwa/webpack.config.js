@@ -3,10 +3,14 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
     mode: 'development',
-    entry: './assets/js/src/app.js',
+    entry: {
+        app: './assets/js/src/app.js',
+        index: './assets/js/src/index.js',
+        single: './assets/js/src/single.js'
+    },
     output: {
         path: path.resolve(__dirname, './assets/js/dist'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     resolve: {
         alias: {
