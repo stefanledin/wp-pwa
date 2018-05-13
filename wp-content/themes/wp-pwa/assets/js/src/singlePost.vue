@@ -1,5 +1,5 @@
 <template>
-    <article v-if="post.id" :id="'post-'+post.id" class="mb-8 bg-white shadow-lg">
+    <article v-if="post.id" :id="'post-'+post.id" class="mb-8 bg-white shadow-lg overflow-hidden">
         <figure v-if="post.thumbnail" v-html="post.thumbnail"></figure>
         <header class="px-4 mt-4">
             <h1 class="text-center">{{ post.title.rendered }}</h1>

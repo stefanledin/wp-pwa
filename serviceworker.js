@@ -15,6 +15,11 @@ workbox.routing.registerRoute(/wp-content\/themes\/wp-pwa\/assets\/.+/, workbox.
 workbox.routing.registerRoute('/', workbox.strategies.staleWhileRevalidate());
 
 /**
+ * Cache single posts
+ */
+workbox.routing.registerRoute(/\/blog\/.+/, workbox.strategies.staleWhileRevalidate());
+
+/**
  * Cache the response from the JSON API
  */
 workbox.routing.registerRoute(/wp-json\/wp\/v2\/posts/, workbox.strategies.networkFirst());

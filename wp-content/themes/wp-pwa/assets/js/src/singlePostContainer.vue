@@ -18,6 +18,7 @@ export default {
     mounted() {
         fetch(`/wp-json/wp/v2/posts/${this.id}`)
             .then(response => {
+                document.querySelector('article.placeholder__article').remove();
                 return response.json()
             })
             .then(data => this.post = data);
