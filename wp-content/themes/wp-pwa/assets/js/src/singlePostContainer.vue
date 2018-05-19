@@ -6,7 +6,6 @@
 import singlePost from './singlePost.vue';
 
 export default {
-    props: ['id'],
     data() {
         return {
             post: {}
@@ -16,9 +15,9 @@ export default {
         singlePost
     },
     mounted() {
-        fetch(`/wp-json/wp/v2/posts/${this.id}`)
+        fetch(`/wp-json/wp/v2/posts/${this.$route.params.id}`)
             .then(response => {
-                document.querySelector('article.placeholder__article').remove();
+                //document.querySelector('article.placeholder__article').remove();
                 return response.json()
             })
             .then(data => this.post = data);

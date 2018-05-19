@@ -4,7 +4,10 @@
         <header class="px-4 mt-4">
             <h2><a :href="link" class="text-black no-underline hover:underline">{{ title.rendered }}</a></h2>
         </header>
-        <div class="p-4 leading-normal" v-html="content.rendered"></div>
+        <div class="p-4 leading-normal">
+            <div v-html="content.rendered"></div>
+            <router-link :to="/blog/+id">Read more</router-link>
+        </div>
     </article>
 </template>
 

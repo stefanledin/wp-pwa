@@ -33,10 +33,10 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script( 'app', $assetsDir.'/js/dist/app.bundle.js', null, bust_cache('/js/dist/bundle.js'), true );
     
     if ( is_home() ) {
-        wp_enqueue_script( 'index', $assetsDir.'/js/dist/index.bundle.js', null, bust_cache('/js/dist/index.bundle.js'), true );
+        #wp_enqueue_script( 'index', $assetsDir.'/js/dist/index.bundle.js', null, bust_cache('/js/dist/index.bundle.js'), true );
     }
     if ( is_single() ) {
-        wp_enqueue_script( 'single', $assetsDir.'/js/dist/single.bundle.js', null, bust_cache('/js/dist/single.bundle.js'), true );
+        #wp_enqueue_script( 'single', $assetsDir.'/js/dist/single.bundle.js', null, bust_cache('/js/dist/single.bundle.js'), true );
     }
 });
 
