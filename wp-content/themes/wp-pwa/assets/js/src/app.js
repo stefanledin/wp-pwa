@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import index from './index.vue';
-import singlePostContainer from './singlePostContainer.vue';
+//import singlePostContainer from './singlePostContainer.vue';
 
 Vue.use(VueRouter);
 
+//const index = () => import(/* webpackChunkName: "index.vue" */ './index.vue');
+const singlePostContainer = () => import(/* webpackChunkName: "singlePostContainer.vue"*/'./singlePostContainer.vue');
 const routes = [
     {
         path: '/',

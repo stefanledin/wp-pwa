@@ -10,7 +10,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './assets/js/dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: '/wp-content/themes/wp-pwa/assets/js/dist/'
     },
     resolve: {
         alias: {

@@ -14,6 +14,7 @@ workbox.routing.registerRoute(/wp-content\/cache\/autoptimize\/.+/, workbox.stra
  * Cache the homepage.
  */
 workbox.routing.registerRoute('/', workbox.strategies.staleWhileRevalidate());
+workbox.routing.registerRoute('/#/', workbox.strategies.staleWhileRevalidate());
 
 /**
  * Cache the response from the JSON API
